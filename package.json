@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "contentlayer dev & next dev",
+    "dev": "concurrently \"contentlayer dev\" \"next dev\"",
     "build": "next build",
     "postbuild": "yarn rss",
     "rss": "cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/generate-rss.mjs",
@@ -53,6 +53,7 @@
     "@typescript-eslint/eslint-plugin": "6.9.0",
     "@typescript-eslint/parser": "6.9.0",
     "autoprefixer": "10.4.16",
+    "concurrently": "^8.2.2",
     "cross-env": "7.0.3",
     "dedent": "1.5.1",
     "eslint": "8.56.0",
@@ -81,6 +82,7 @@
     ]
   },
   "resolutions": {
-    "strip-ansi": "6.0.1"
+    "strip-ansi": "6.0.1",
+    "jackspeak": "2.1.1"
   }
 }
